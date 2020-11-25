@@ -1,0 +1,7 @@
+$(wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb)
+$(sudo dpkg -i google-chrome-stable_current_amd64.deb)
+$(wget https://chromedriver.storage.googleapis.com/87.0.4280.20/chromedriver_linux64.zip)
+$(unzip -o chromedriver_linux64.zip)
+$(rm google-chrome-stable_current_amd64.deb)
+$(rm chromedriver_linux64.zip)
+$(cd web/;python3 -u -m http.server 8000 > logs 2>&1 &)
